@@ -10,7 +10,7 @@
   --sub_alt_color : #D3CFC1 ;
 }
 body{
-  height: 100vh;
+  min-height: 95vh;
   position: relative;
   font-family: 'Roboto Mono', 'Arial';
   background-color: var(--bg_color);
@@ -128,6 +128,8 @@ a{
 
 /*---------------------------------------FOOTER-------------------- */
 footer{
+  border-top: 1px solid var(--sub_alt_color);
+  padding-top: 1rem;
   position: absolute;
   bottom: 1rem;
   width: 80vw;
