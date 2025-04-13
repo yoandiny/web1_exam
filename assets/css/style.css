@@ -4,3 +4,10 @@
     box-sizing: border-box;
 }
 
+:root{
+    --bg_color :  #EEEBE2;
+    --main-color: #080909;
+    --secondary-color: #99947F;
+    --sub_alt_color : #D3CFC1 ;
+}
+
