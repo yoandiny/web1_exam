@@ -1,18 +1,20 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 :root{
-    --bg_color :  #EEEBE2;
-    --main-color: #080909;
-    --secondary-color: #99947F;
-    --sub_alt_color : #D3CFC1 ;
+  --bg_color :  #EEEBE2;
+  --main-color: #080909;
+  --secondary-color: #99947F;
+  --sub_alt_color : #D3CFC1 ;
 }
 body{
-    font-family: 'Roboto Mono', 'Arial';
-    background-color: var(--bg_color);
-    padding: 0 10vw;
+  height: 100vh;
+  position: relative;
+  font-family: 'Roboto Mono', 'Arial';
+  background-color: var(--bg_color);
+  padding: 0 10vw;
 }
 .flex-btw{
     display: flex;
@@ -25,6 +27,9 @@ ul{
 a{
     text-decoration: none;
 }
+
+/*---------------------------------------NAV-BAR-------------------- */
+
 .logo{
     display: flex;
     position: relative;
@@ -46,13 +51,15 @@ a{
     width: 50px;
     /* border: 1px solid rgb(111, 91, 91); */
 }
-.navbar a{
+.navbar a, footer ul a{
     color: var(--secondary-color);
     transition: 0.4s ease;
 }
-.navbar a:hover{
+.navbar a:hover, footer ul a:hover{
     color: var(--main-color);
 }
+/*---------------------------------------BAR-FEATURE-------------------- */
+
 
 .bar-feature {
     margin-top: 3rem;
@@ -117,4 +124,19 @@ a{
 
 .subnav:hover .subnav-content {
   display: block;
+}
+
+/*---------------------------------------FOOTER-------------------- */
+footer{
+  position: absolute;
+  bottom: 1rem;
+  width: 80vw;
+  font-size: .8rem;
+}
+
+footer ul:nth-child(1) li{
+  padding-right: 0.6rem;
+}
+footer ul:nth-child(2) li{
+  padding-left: 0.6rem;
 }
