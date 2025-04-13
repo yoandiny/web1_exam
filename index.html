@@ -4,26 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Typing Test</title>
     <link rel="stylesheet" href="assets/css/index.css">
+=======
+    <title>Keygo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+>>>>>>> 249902e (Ajout des styles css de la barre des fonctionnalités)
     <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="assets/js/index.js"></script>
 </head>
 <body>
     <header>
-        <div class="navbar">
+        <div class="navbar flex-btw">
             <div class="logo">
                 <i class="fa-solid fa-terminal"></i>
                 <h1>Keygo</h1>
             </div>
-            <nav>
-                <ul>
+            <nav class="flex-btw">
+                <ul class="flex-btw">
                     <li><a href="index.html">Test</a></li>
-                    <li><a href="index.html">About</a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>
-                <ul>
-                    <li><a href="index.html"><i title="notification" class="fa-solid fa-bell"></i></a></li>
+
+                <ul class="flex-btw">
+                    <li><a href="#notification.html"><i title="notification" class="fa-solid fa-bell"></i></a></li>
                     <li><a href="profil.html"><i title="profil" class="fa-regular fa-user"></i></a></li>
                 </ul>
             </nav>
@@ -40,6 +46,14 @@
     <main>
         <div class="bar-feature">
             <div class="subnav">
+                <button class="subnavbtn"><i class="fa-solid fa-music"></i></button>
+                <div class="subnav-content">
+                    <a href="#water">Water</a>
+                    <a href="#jazz">Jazz</a>
+                    <a href="#rock">Rock</a>
+                </div>
+            </div>
+            <div class="subnav">
                 <button class="subnavbtn">Mode</button>
                 <div class="subnav-content">
                     <a href="#ghost"><i class="fa-solid fa-ghost"></i> Ghost</a>
@@ -52,6 +66,13 @@
             </div>
             <a href="#words"><i class="fa-solid fa-a"></i> Words</a>
             <a href="#time"><i class="fa-solid fa-hourglass-half"></i> Time</a>
+            <div class="time-feature">
+                <a href="#time">15</a>
+                <a href="#time">30</a>
+                <a href="#time">60</a>
+                <a href="#time">120</a>
+            </div>
+        
         </div>
         <!-- <p id="word-display"></p> -->
          <div>
