@@ -35,3 +35,21 @@ a{
     left: 1.3rem;
     font-size: 2.4rem;
 }
+.navbar{
+    margin-top: 1.8rem;
+}
+.navbar nav ul:nth-child(1){
+    width: 100px;
+    margin-right: 3rem;
+}
+.navbar nav ul:nth-child(2){
+    width: 50px;
+    /* border: 1px solid rgb(111, 91, 91); */
+}
+.navbar a{
+    color: var(--secondary-color);
+    transition: 0.4s ease;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
