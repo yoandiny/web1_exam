@@ -22,24 +22,42 @@
                     <li><a href="index.html">About</a></li>
                 </ul>
                 <ul>
-                    <li><a href="index.html"><i class="fa-solid fa-bell"></i></a></li>
-                    <li><a href="index.html"><i class="fa-regular fa-user"></i></a></li>
+                    <li><a href="index.html"><i title="notification" class="fa-solid fa-bell"></i></a></li>
+                    <li><a href="index.html"><i title="profil" class="fa-regular fa-user"></i></a></li>
                 </ul>
             </nav>
         </div>
 
-        <label for="mode">Select Mode:</label>
+        <!-- <label for="mode">Select Mode:</label>
         <select id="mode">
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="hard">Hard</option>
-        </select>
+        </select> -->
     </header>
 
     <main>
-        <p id="word-display"></p>
-        <input type="text" id="input-field" autofocus>
-        <p id="results">Results : </p>
+        <div class="bar-feature">
+            <div class="subnav">
+                <button class="subnavbtn">Mode</button>
+                <div class="subnav-content">
+                    <a href="#"><i class="fa-solid fa-ghost"></i> Ghost</a>
+                    <a href="#"><i class="fa-solid fa-cloud"></i> Zen</a>
+                    <a href="#"><i class="fa-solid fa-skull-crossbones"></i> Ban</a>
+                    <a href="#"><i class="fa-solid fa-rss"></i> Shake</a>
+                    <a href="#"><i class="fa-brands fa-flipboard"></i> Reverse</a>
+                    <a href="#"><i class="fa-solid fa-bolt-lightning"></i> Flash</a>
+                </div>
+            </div>
+            <a href="#"><i class="fa-solid fa-a"></i> Words</a>
+            <a href="#"><i class="fa-solid fa-hourglass-half"></i> Time</a>
+        </div>
+        <!-- <p id="word-display"></p> -->
+         <div>
+            <input type="text" id="input-field" autofocus>
+            <button class="btn-next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <!-- <p id="results">Results : </p> -->
     </main>
 
     <script src="script.js"></script>
