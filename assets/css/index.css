@@ -103,7 +103,12 @@ display: block;
   padding: 10px 6px;
   width: auto;
 }
-
+.btn-next{
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
 
 
 
