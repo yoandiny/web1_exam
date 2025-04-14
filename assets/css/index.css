@@ -9,6 +9,15 @@
   --secondary-color: #99947F;
   --sub_alt_color : #D3CFC1 ;
 }
+.second-color{
+  color: #99947F;
+}
+.main-color{
+  color: #080909;
+}
+.current-word{
+  color: #c87e74;
+}
 body{
   min-height: 95vh;
   position: relative;
