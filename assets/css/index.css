@@ -16,115 +16,75 @@ body{
   background-color: var(--bg_color);
   padding: 0 10vw;
 }
-.flex-btw{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-ul{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-}
 
-/*---------------------------------------NAV-BAR-------------------- */
-
-.logo{
-    display: flex;
-    position: relative;
-}
-.logo i{
-    position: relative;
-    top: .6rem;
-    left: 1.3rem;
-    font-size: 2.4rem;
-}
-.navbar{
-    margin-top: 1.8rem;
-}
-.navbar nav ul:nth-child(1){
-    width: 100px;
-    margin-right: 3rem;
-}
-.navbar nav ul:nth-child(2){
-    width: 50px;
-    /* border: 1px solid rgb(111, 91, 91); */
-}
-.navbar a, footer ul a{
-    color: var(--secondary-color);
-    transition: 0.4s ease;
-}
-.navbar a:hover, footer ul a:hover{
-    color: var(--main-color);
-}
 /*---------------------------------------BAR-FEATURE-------------------- */
 
 
 .bar-feature {
-    margin-top: 3rem;
-    overflow: hidden;
-    background-color: var(--sub_alt_color);
-    width: 527px;
-    border-top-left-radius: 5px;
-    border-top-right-radius:5px ;
+  margin-top: 3rem;
+  overflow: hidden;
+  background-color: var(--sub_alt_color);
+  width: 527px;
+  border-top-left-radius: 5px;
+  border-top-right-radius:5px ;
 }
 
 .bar-feature a {
-  float: left;
-  font-size: 13px;
-  color: var(--secondary-color);
-  text-align: center;
-  padding: 10px 16px;
-  text-decoration: none;
+float: left;
+font-size: 13px;
+color: var(--secondary-color);
+text-align: center;
+padding: 10px 16px;
+text-decoration: none;
 }
 
 .subnav {
-  float: left;
-  overflow: hidden;
-  transition:all 0.4s ease;
+float: left;
+overflow: hidden;
+transition:all 0.4s ease;
 }
 
 .subnav .subnavbtn {
-  font-size: 13px;
-  border: none;
-  outline: none;
-  color: var(--secondary-color);
-  padding: 10px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+font-size: 13px;
+border: none;
+outline: none;
+color: var(--secondary-color);
+padding: 10px 16px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
 }
 
 .bar-feature a:hover, .subnav:hover .subnavbtn {
-  color: var(--main-color);
-  background-color: #99947f40;
+color: var(--main-color);
+background-color: #99947f40;
 }
 
 .subnav-content {
-  display: none;
-  position: absolute;
-  left: 10vw;
-  background-color: var(--sub_alt_color);
-  color: var(--main-color);
-  z-index: 1;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius:5px ;
+display: none;
+position: absolute;
+left: 10vw;
+background-color: var(--sub_alt_color);
+color: var(--main-color);
+z-index: 1;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius:5px ;
 }
 
 .subnav-content a {
-  transition: 0.4s ease;
-  float: left;
-  text-decoration: none;
+transition: 0.4s ease;
+float: left;
+text-decoration: none;
 }
 
 .subnav-content a:hover {
-  color: black;
+color: black;
 }
 
 .subnav:hover .subnav-content {
-  display: block;
+display: block;
 }
+
 
 /*---------------------------------------FOOTER-------------------- */
 footer{
