@@ -93,6 +93,18 @@ color: black;
 .subnav:hover .subnav-content {
 display: block;
 }
+/*---------------------------------------MAIN-------------------- */
+.entry input{
+  font-size: 1.4rem;
+  background-color: var(--sub_alt_color);
+  border: none;
+  border-radius: 3px;
+  color: var(--main-color);
+  padding: 10px 6px;
+  width: auto;
+}
+
+
 
 
 /*---------------------------------------FOOTER-------------------- */
@@ -111,3 +123,6 @@ footer ul:nth-child(1) li{
 footer ul:nth-child(2) li{
   padding-left: 0.6rem;
 }
+
+
+
