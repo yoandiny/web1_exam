@@ -94,8 +94,12 @@ color: black;
 display: block;
 }
 /*---------------------------------------MAIN-------------------- */
+#word-display {
+  font-size: 2rem ;
+  line-height: 3rem;
+}
 .entry input{
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   background-color: var(--sub_alt_color);
   border: none;
   border-radius: 3px;
