@@ -41,10 +41,28 @@ const modes = {
       span.style.animationDelay = `${(Math.random() * 0.3).toFixed(2)}s`;
     },
     "Reverse": (span) => {
+        if (!span.dataset.originalText) {
+            span.dataset.originalText = span.textContent;
+        }
         span.textContent = span.textContent.split("").reverse().join("")
     },
     "Mode": () => {}
-  };
+};
+
+//Desactivation des modes 
+const disableModes = () =>{
+    document.querySelectorAll(".shake-feature").forEach(el => {
+        el.classList.remove("shake-feature");
+        el.style.animationDelay = ""; 
+    });
+    document.querySelectorAll("span").forEach(el => {
+        if (el.dataset.originalText) {
+            el.textContent = el.dataset.originalText;
+            delete el.dataset.originalText;
+        }
+    });
+}
+
 
 // Initialize the typing test
 const startTest = (wordCount = 50) => {
@@ -167,12 +185,8 @@ optionMode.addEventListener("click", (e)=> {
         }
     }
     if(feature.textContent.includes("Mode")){
-        document.querySelectorAll(".shake-feature").forEach(el => {
-            el.classList.remove("shake-feature");
-            el.style.animationDelay = ""; 
-        });
+        disableModes()
     }
-    // console.log(feature.innerText);
     
 })
 
