@@ -33,6 +33,16 @@ const getRandomWord = (mode) => {
     return wordList[Math.floor(Math.random() * wordList.length)];
 };
 
+
+//The Different Mode
+const modes = {
+    "Shake": (span) => {
+      span.classList.add("shake-feature");
+      span.style.animationDelay = `${(Math.random() * 0.3).toFixed(2)}s`;
+    },
+    "Mode": () => {}
+  };
+
 // Initialize the typing test
 const startTest = (wordCount = 50) => {
     wordsToType.length = 0; // Clear previous words
@@ -43,6 +53,7 @@ const startTest = (wordCount = 50) => {
     totalCharsType = 0;
     totalErrors = 0;
 
+
     for (let i = 0; i < wordCount; i++) {
         wordsToType.push(getRandomWord(modeSelect.value));
     }
@@ -51,15 +62,16 @@ const startTest = (wordCount = 50) => {
         const span = document.createElement("span");
         span.textContent = word ;
         span.classList.add("second-color")
+
+        //Si mode activer
+        const currentModeName = feature.textContent.trim();
+        if (modes[currentModeName]) {
+            modes[currentModeName](span); 
+        }
         
         if (index === 0) span.classList.add("current-word"); // Highlight first word
         wordDisplay.appendChild(span);
         wordDisplay.append(" ")
-        
-        // Mode shake
-        span.classList.add("shake-feature")
-        const randomDelay = (Math.random() * 0.3).toFixed(2);
-        span.style.animationDelay = `${randomDelay}s`;
     });
 
     inputField.value = "";
@@ -148,7 +160,14 @@ optionMode.addEventListener("click", (e)=> {
             feature.innerHTML = valueWithIcon
             
             currentMode = targetLink
+            startTest()
         }
+    }
+    if(feature.textContent.includes("Mode")){
+        document.querySelectorAll(".shake-feature").forEach(el => {
+            el.classList.remove("shake-feature");
+            el.style.animationDelay = ""; 
+        });
     }
     // console.log(feature.innerText);
     
