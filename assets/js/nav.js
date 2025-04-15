@@ -1,8 +1,10 @@
 const menu = document.getElementById("navMenu");
 
+
 menu.innerHTML = `
            <div class="navbar flex-btw">
             <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+            
            <link rel="stylesheet" href="assets/css/nav.css">
             <div class="logo">
                 <i class="fa-solid fa-terminal"></i>
@@ -21,3 +23,9 @@ menu.innerHTML = `
             </nav>
         </div>
 `;
+
+const logo = document.querySelector(".logo");
+
+logo.addEventListener("click", () => {
+    window.location.href = "index.html";
+});

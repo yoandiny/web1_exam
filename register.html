@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/register.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+    <script defer src="assets/js/register.js"></script>
+    <script defer src="assets/js/nav.js"></script>
+    <title>Register</title>
+</head>
+<body>
+    <div id="navMenu"></div>
+
+    <div class="register-form">
+        <h3 class="title">Register</h3>
+        <form method="post">
+            <label class="register-form-text" id="username-text" for="username">Username</label>
+            <input class="register-form-input" type="text" name="username" id="username" placeholder="John Doe">
+            <label class="register-form-text" id="email-text" for="email">Email address</label>
+            <input class="register-form-input" type="email" name="email" id="email" placeholder="test@example.com">
+            <label class="register-form-text" id="password-text" for="password">Password</label>
+            <input class="register-form-input" type="password" name="password" id="password">
+            <p>Already have an account? <a class="register-link" href="login.html">Login</a></p>
+            <button class="register-form-submit">Register</button>
+
+            <section class="btn-container">
+                <div class="register-btn" id="google-register" onclick="handleregister('google-register')" >
+                    <img class="register-logo" src="assets/img/google-logo.png" alt="Google Logo">
+                    <span class="register-text">S'enregistrer avec Google</span>
+                </div>
+            
+                <div class="register-btn" id="github-register" onclick="handleregister('github-register')" >
+                    <img class="register-logo" src="assets/img/github-logo.png" alt="GitHub Logo">
+                    <span class="register-text">S'enregistrer avec GitHub</span>
+                </div>
+               </section>
+
+               <div class="register-form-message">
+                <p class="register-form-message-text"></p>
+            </div>
+
+        </form>
+
+        
+
+        
+    </div>
+
+   
+    
+</body>
+</html>
