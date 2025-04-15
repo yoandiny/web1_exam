@@ -8,8 +8,8 @@
 let startTime = null, previousEndTime = null;
 let currentWordIndex = 0;
 const wordsToType = [];
-let totalChartsType = 0
-let totalErros = 0
+let totalCharsType = 0
+let totalErrors = 0
 
 const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
@@ -35,8 +35,8 @@ const startTest = (wordCount = 50) => {
     currentWordIndex = 0;
     startTime = null;
     previousEndTime = null;
-    totalChartsType = 0;
-    totalErros = 0;
+    totalCharsType = 0;
+    totalErrors = 0;
 
     for (let i = 0; i < wordCount; i++) {
         wordsToType.push(getRandomWord(modeSelect.value));
