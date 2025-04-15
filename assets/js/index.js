@@ -87,6 +87,22 @@ const updateWord = (event) => {
     }
 };
 
+//Hangle keydown for total cumul and check in live
+const handleKeydown = (event) => {
+    startTimer(); //start the chrono if it's not done yet
+
+    if (event.key !== "Backspace" && event.key !== " " && event.key.length === 1) {
+        const currentInput = inputField.value; 
+        const expectedChar = wordsToType[currentWordIndex][currentInput.length];
+        totalCharsType++; 
+        if (event.key !== expectedChar) {
+            totalErrors++; 
+        }
+    }
+
+    updateWord(event);
+};
+
 // Highlight the current word in red
 const highlightNextWord = () => {
     const wordElements = wordDisplay.children;
