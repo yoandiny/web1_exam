@@ -49,10 +49,17 @@ const startTest = (wordCount = 50) => {
 
     wordsToType.forEach((word, index) => {
         const span = document.createElement("span");
-        span.textContent = word + " ";
+        span.textContent = word ;
         span.classList.add("second-color")
+        
         if (index === 0) span.classList.add("current-word"); // Highlight first word
         wordDisplay.appendChild(span);
+        wordDisplay.append(" ")
+        
+        // Mode shake
+        span.classList.add("shake-feature")
+        const randomDelay = (Math.random() * 0.3).toFixed(2);
+        span.style.animationDelay = `${randomDelay}s`;
     });
 
     inputField.value = "";
