@@ -27,8 +27,6 @@ body{
 }
 
 /*---------------------------------------BAR-FEATURE-------------------- */
-
-
 .bar-feature {
   margin-top: 3rem;
   overflow: hidden;
@@ -92,6 +90,10 @@ color: black;
 
 .subnav:hover .subnav-content {
 display: block;
+}
+
+.time-feature a:nth-child(1), #word{
+  border-left: 2px solid var(--bg_color);
 }
 /*---------------------------------------MAIN-------------------- */
 #word-display {
