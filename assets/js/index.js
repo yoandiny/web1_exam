@@ -63,7 +63,7 @@ const startTimer = () => {
 const getCurrentStats = () => {
     const elapsedTime = (Date.now() - previousEndTime) / 1000; // Seconds
     const wpm = (wordsToType[currentWordIndex].length / 5) / (elapsedTime / 60); // 5 chars = 1 word
-    const accuracy = (wordsToType[currentWordIndex].length / inputField.value.length) * 100;
+    const accuracy = totalCharsType === 0 ? 100 : ((totalCharsType - totalErrors) / totalCharsType) * 100;
 
     return { wpm: wpm.toFixed(2), accuracy: accuracy.toFixed(2) };
 };
