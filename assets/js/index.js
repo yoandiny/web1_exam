@@ -40,6 +40,9 @@ const modes = {
       span.classList.add("shake-feature");
       span.style.animationDelay = `${(Math.random() * 0.3).toFixed(2)}s`;
     },
+    "Reverse": (span) => {
+        span.textContent = span.textContent.split("").reverse().join("")
+    },
     "Mode": () => {}
   };
 
