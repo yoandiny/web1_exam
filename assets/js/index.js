@@ -42,7 +42,7 @@ const startTest = (wordCount = 50) => {
         const span = document.createElement("span");
         span.textContent = word + " ";
         span.classList.add("second-color")
-        if (index === 0) span.classList.add("main-color"); // Highlight first word
+        if (index === 0) span.classList.add("current-word"); // Highlight first word
         wordDisplay.appendChild(span);
     });
 
