@@ -118,8 +118,7 @@ const highlightNextWord = () => {
 // Event listeners
 // Attach `updateWord` to `keydown` instead of `input`
 inputField.addEventListener("keydown", (event) => {
-    startTimer();
-    updateWord(event);
+    handleKeydown(event);
 });
 modeSelect.addEventListener("change", () => startTest());
 
