@@ -10,6 +10,7 @@ let currentWordIndex = 0;
 const wordsToType = [];
 let totalCharsType = 0
 let totalErrors = 0
+let currentMode = null; 
 
 const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
@@ -17,33 +18,6 @@ const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
 const feature = document.getElementById("feature");
 const optionMode = document.querySelector(".optionMode")
-
-let currentMode = null; 
-optionMode.addEventListener("click", (e)=> {
-    e.preventDefault()
-    
-    const targetLink = e.target.closest('a')
-    if(targetLink){
-        if(currentMode === targetLink){
-            targetLink.style.color = "#99947F";
-            feature.innerHTML = "Mode";
-            currentMode = null;
-        }else{
-            document.querySelectorAll('.optionMode a').forEach(link => {
-                link.style.color = "#99947F";
-            });
-            targetLink.style.color = "#080909";
-            const value = targetLink.textContent.trim()
-            const valueWithIcon =  targetLink.innerHTML.trim()
-            feature.innerHTML = valueWithIcon
-            
-            currentMode = targetLink
-        }
-    }
-    // console.log(feature.innerText);
-    
-})
-
 
 
 
@@ -146,11 +120,38 @@ const highlightNextWord = () => {
     }
 };
 
+
 // Event listeners
+optionMode.addEventListener("click", (e)=> {
+    e.preventDefault()
+    
+    const targetLink = e.target.closest('a')
+    if(targetLink){
+        if(currentMode === targetLink){
+            targetLink.style.color = "#99947F";
+            feature.innerHTML = "Mode";
+            currentMode = null;
+        }else{
+            document.querySelectorAll('.optionMode a').forEach(link => {
+                link.style.color = "#99947F";
+            });
+            targetLink.style.color = "#080909";
+            const value = targetLink.textContent.trim()
+            const valueWithIcon =  targetLink.innerHTML.trim()
+            feature.innerHTML = valueWithIcon
+            
+            currentMode = targetLink
+        }
+    }
+    // console.log(feature.innerText);
+    
+})
+
+
 // Attach `updateWord` to `keydown` instead of `input`
 inputField.addEventListener("keydown", (event) => {
     handleKeydown(event);
-});
+});    
 modeSelect.addEventListener("change", () => startTest());
 
 // Start the test
