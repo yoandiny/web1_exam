@@ -202,7 +202,7 @@ optionMode.addEventListener("click", (e)=> {
     
     const targetLink = e.target.closest('a')
     if(targetLink){
-        if(currentMode === targetLink){
+        if(currentMode === targetLink || targetLink.innerHTML === `<i class="fa-solid fa-ban"></i>`){
             targetLink.style.color = "#99947F";
             feature.innerHTML = "Mode";
             currentMode = null;
