@@ -8,6 +8,12 @@ if (isConnected === "true"){
 const handleLogin = (loginWay) => {
     const loginButton = document.getElementById(loginWay);
     loginButton.innerText= '...';
+    
+    if(loginWay === 'google-login'){
+        localStorage.setItem("Username", 'Google User');
+    }else{
+        localStorage.setItem("Username", 'GitHub User');
+    }
 
     setTimeout(() => {
         const messageBox = document.querySelector('.login-form-message');
@@ -28,11 +34,13 @@ const handleLogin = (loginWay) => {
 }
 
 const handleSubmit = () => {
-    
+
+    const mail = localStorage.getItem('mail') || null;
+    const password = localStorage.getItem('password') || null ;
     const mailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
-    const mail = mailInput.value;
-    const password = passwordInput.value;
+    const mailValue = mailInput.value;
+    const passwordValue = passwordInput.value;
 
     const submitButton = document.querySelector('.login-form-submit');
     const messageBox = document.querySelector('.login-form-message');
@@ -41,15 +49,25 @@ const handleSubmit = () => {
     submitButton.innerText = '...';
 
     setTimeout(() => {
-        if(mail && password){
-            
-            message.innerText = 'Connexion réussie';
-            messageBox.classList.add('login-succes-message')
+        if(mailValue && passwordValue){
+            if(mailValue == mail && passwordValue == password){
+                message.innerText = 'Connexion réussie';
+                messageBox.classList.add('login-succes-message')
+    
+                setTimeout(() => {
+                    localStorage.setItem("isConnected", "true");
+                    window.location.href = "profil.html";
+                }, 100);
+            }else{
+                message.innerText = 'Adresse mail ou mot de passe erroné';
+            messageBox.classList.add('login-error-message')
 
             setTimeout(() => {
-                localStorage.setItem("isConnected", "true");
-                window.location.href = "profil.html";
+                submitButton.innerText = 'Login';
             }, 100);
+            }
+            
+           
         
         }else{
             
