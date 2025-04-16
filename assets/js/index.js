@@ -12,7 +12,7 @@ let totalCharsType = 0
 let totalErrors = 0
 let currentMode = null; 
 let flashTimeouts = [];
-let wordCount = 15
+let wordCount = 30
 
 const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
@@ -20,7 +20,7 @@ const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
 const feature = document.getElementById("feature");
 const optionMode = document.querySelector(".optionMode")
-document.querySelector('.time-feature a:nth-child(1)').style.color = "#080909";
+document.querySelector('.time-feature a:nth-child(2)').style.color = "#080909";
 document.getElementById("word").style.color = "#080909";
 
 
