@@ -11,6 +11,7 @@ const wordsToType = [];
 let totalCharsType = 0
 let totalErrors = 0
 let currentMode = null; 
+let flashTimeouts = [];
 
 const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
@@ -56,6 +57,20 @@ const modes = {
             .map(char => Math.random() < 0.5 ? char.toUpperCase() : char.toLowerCase())
             .join('');
     },
+    "Flash": () => {
+        const allWords = wordDisplay.querySelectorAll("span");
+
+        setTimeout(() => {
+            allWords.forEach((span, index) => {
+                const timeoutId = setTimeout(() => {
+                    span.style.visibility = "hidden";
+                }, 2500 * index);
+
+                flashTimeouts.push(timeoutId);
+            });
+        }, 3000); 
+    },
+    
     "Mode": () => {}
 };
 
@@ -70,6 +85,11 @@ const disableModes = () =>{
             el.textContent = el.dataset.originalText;
             delete el.dataset.originalText;
         }
+    });
+    flashTimeouts.forEach(timeoutId => clearTimeout(timeoutId));
+    flashTimeouts = [];
+    wordDisplay.querySelectorAll("span").forEach(span => {
+        span.style.visibility = "visible"; 
     });
 }
 
@@ -145,7 +165,7 @@ const updateWord = (event) => {
 //Hangle keydown for total cumul and check in live
 const handleKeydown = (event) => {
     startTimer(); //start the chrono if it's not done yet
-    
+
     if (feature.textContent.trim() === "Bounce") {
         inputField.classList.add("bounce");
         // Supprime la classe après 300ms pour réactiver l'animation sur le prochain keydown
