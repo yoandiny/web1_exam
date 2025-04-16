@@ -18,13 +18,18 @@
 .current-word{
   color: #c87e74;
 }
-body{
-  min-height: 95vh;
-  position: relative;
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: 'Roboto Mono', 'Arial';
   background-color: var(--bg_color);
   padding: 0 10vw;
 }
+main {
+  flex: 1; 
+}
+
 
 /*---------------------------------------BAR-FEATURE-------------------- */
 .bar-feature {
@@ -120,15 +125,13 @@ display: block;
 
 
 /*---------------------------------------FOOTER-------------------- */
-footer{
+footer {
   border-top: 1px solid var(--sub_alt_color);
   padding-top: 1rem;
-  position: absolute;
-  bottom: 1rem;
   width: 80vw;
-  font-size: .8rem;
+  font-size: 0.8rem;
+  margin: 1rem auto 0 auto;
 }
-
 footer ul:nth-child(1) li{
   padding-right: 0.6rem;
 }
