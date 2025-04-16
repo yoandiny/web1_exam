@@ -247,7 +247,7 @@ optionMode.addEventListener("click", (e)=> {
 inputField.addEventListener("keydown", (event) => {
     handleKeydown(event);
 });    
-modeSelect.addEventListener("change", () => startTest());
+modeSelect.addEventListener("change", () => startTest(wordCount));
 
 // Start the test
 startTest(wordCount);
