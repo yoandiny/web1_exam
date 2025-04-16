@@ -145,7 +145,12 @@ const updateWord = (event) => {
 //Hangle keydown for total cumul and check in live
 const handleKeydown = (event) => {
     startTimer(); //start the chrono if it's not done yet
-   
+    
+    if (feature.textContent.trim() === "Bounce") {
+        inputField.classList.add("bounce");
+        // Supprime la classe après 300ms pour réactiver l'animation sur le prochain keydown
+        setTimeout(() => inputField.classList.remove("bounce"), 300);
+    }
     if (event.key !== "Backspace" && event.key !== " " && event.key.length === 1) {
         const currentInput = inputField.value; 
         const expectedChar = wordsToType[currentWordIndex][currentInput.length];
