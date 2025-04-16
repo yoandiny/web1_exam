@@ -144,7 +144,7 @@ footer ul:nth-child(2) li{
 /*----------------------------------------SHAKE-FEATURE----------------*/
 .shake-feature {
   display: inline-block;
-  animation: shake 0.5s infinite;
+  animation: shake 0.38s infinite;
 }
 
 @keyframes shake {
