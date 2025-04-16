@@ -12,6 +12,7 @@ let totalCharsType = 0
 let totalErrors = 0
 let currentMode = null; 
 let flashTimeouts = [];
+let wordCount = 15
 
 const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
@@ -95,7 +96,7 @@ const disableModes = () =>{
 
 
 // Initialize the typing test
-const startTest = (wordCount = 15) => {
+const startTest = (wordCount) => {
     wordsToType.length = 0; // Clear previous words
     wordDisplay.innerHTML = ""; // Clear display
     currentWordIndex = 0;
@@ -249,4 +250,4 @@ inputField.addEventListener("keydown", (event) => {
 modeSelect.addEventListener("change", () => startTest());
 
 // Start the test
-startTest();
+startTest(wordCount);
