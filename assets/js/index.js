@@ -64,7 +64,7 @@ const modes = {
             allWords.forEach((span, index) => {
                 const timeoutId = setTimeout(() => {
                     span.style.visibility = "hidden";
-                }, 2500 * index);
+                }, 2800 * index);
 
                 flashTimeouts.push(timeoutId);
             });
