@@ -157,3 +157,19 @@ footer ul:nth-child(2) li{
   90%  { transform: translate(4px, 5px) rotate(-1deg); }
   100% { transform: translate(3px, -5px) rotate(-3deg); }
 }
+
+.bounce {
+  animation: bounce 0.5s cubic-bezier(0.2, 1.84, 0.42, 1);
+}
+
+@keyframes bounce {
+  0%   { transform: translate(0, 0); }
+  10%  { transform: translate(-10px, -60px); }
+  25%  { transform: translate(10px, 40px); }
+  40%  { transform: translate(-8px, -30px); }
+  55%  { transform: translate(6px, 20px); }
+  70%  { transform: translate(-4px, -10px); }
+  85%  { transform: translate(2px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
