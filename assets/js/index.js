@@ -19,8 +19,8 @@ const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
 const feature = document.getElementById("feature");
 const optionMode = document.querySelector(".optionMode")
-
-
+document.querySelector('.time-feature a:nth-child(1)').style.color = "#080909";
+document.getElementById("word").style.color = "#080909";
 
 
 const words = {
@@ -95,7 +95,7 @@ const disableModes = () =>{
 
 
 // Initialize the typing test
-const startTest = (wordCount = 50) => {
+const startTest = (wordCount = 15) => {
     wordsToType.length = 0; // Clear previous words
     wordDisplay.innerHTML = ""; // Clear display
     currentWordIndex = 0;
@@ -197,6 +197,22 @@ const highlightNextWord = () => {
 
 
 // Event listeners
+// Handle wod count option clickss 15 / 30 / 60 / 120
+document.querySelector(".time-feature").addEventListener("click", (e) => {
+    e.preventDefault();
+    const target = e.target.closest("a");
+    if (!target) return;
+
+    document.querySelectorAll(".time-feature a").forEach(link => {
+        link.style.color = "#99947F";
+    });
+    target.style.color = "#080909";
+
+    wordCount = parseInt(target.textContent.trim());
+    startTest(wordCount);
+});
+
+//Handle option mode
 optionMode.addEventListener("click", (e)=> {
     e.preventDefault()
     
@@ -216,7 +232,7 @@ optionMode.addEventListener("click", (e)=> {
             feature.innerHTML = valueWithIcon
             
             currentMode = targetLink
-            startTest()
+            startTest(wordCount)
         }
     }
     if(feature.textContent.includes("Mode")){
