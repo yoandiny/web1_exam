@@ -230,6 +230,7 @@ optionMode.addEventListener("click", (e)=> {
         if(currentMode === targetLink || targetLink.innerHTML === `<i class="fa-solid fa-ban"></i>`){
             targetLink.style.color = "#99947F";
             feature.innerHTML = "Mode";
+            feature.style.setProperty("color", "#99947F", "important");
             currentMode = null;
         }else{
             document.querySelectorAll('.optionMode a').forEach(link => {
@@ -239,6 +240,8 @@ optionMode.addEventListener("click", (e)=> {
             const value = targetLink.textContent.trim()
             const valueWithIcon =  targetLink.innerHTML.trim()
             feature.innerHTML = valueWithIcon
+            feature.style.setProperty("color", "#080909", "important");
+
             
             currentMode = targetLink
             startTest(wordCount)
