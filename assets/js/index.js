@@ -170,6 +170,18 @@ const updateWord = (event) => {
                 previousEndTime = Date.now();
                 const finalTime = (previousEndTime - startTime) / 1000;
                 results.textContent = `WPM: ${wpm}, Accuracy: ${accuracy}%`;
+
+                //Stockage score with localStorage
+                const history = JSON.parse(localStorage.getItem("typingHistory")) || [];
+                history.push({
+                    date: new Date().toLocaleString(),
+                    mode: feature.textContent.trim(),
+                    difficulty: modeSelect.value,
+                    wordCount: wordCount,
+                    wpm: parseFloat(wpm),
+                    accuracy: parseFloat(accuracy)
+                });
+                localStorage.setItem("typingHistory", JSON.stringify(history));
             }
 
             currentWordIndex++;
