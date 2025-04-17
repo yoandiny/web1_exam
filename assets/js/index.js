@@ -38,7 +38,7 @@ const words = {
     lv5: ["elegant", "frequent", "holiday", "capture", "library"],
     lv6: ["development", "extravagant", "imagination", "dictionary", "situation"], 
     lv7: ["synchronize", "misconception", "architecture", "transparency", "exaggeration"],
-    lv8: ["System42", "file_2023", "codeReview", "update-v1", "userLogin"],
+    lv8: ["system42", "file_2023", "code3-view", "update-v1", "user19login"],
     lv9: ["check,please", "let's-go!", "error.404", "run();", "name@email.com"], 
     lv10: ["console.log('done!')", "if(x===10){return;}", "let $var=42;", "Math.PI*radius", "user#1234"] 
 };
@@ -314,6 +314,9 @@ optionMode.addEventListener("click", (e)=> {
             feature.innerHTML = "Mode";
             feature.style.setProperty("color", "#99947F", "important");
             currentMode = null;
+            document.querySelectorAll('.optionMode a').forEach(link => {
+                link.style.color = "#99947F";
+            });
         }else{
             document.querySelectorAll('.optionMode a').forEach(link => {
                 link.style.color = "#99947F";
@@ -353,7 +356,9 @@ optionMusic.addEventListener("click", (e) => {
                 currentTrack.currentTime = 0;
                 currentTrack = null;
             }
-
+            document.querySelectorAll('.optionMusic a').forEach(link => {
+                link.style.color = "#99947F";
+            });
             targetLink.style.color = "#99947F";
             featureMusic.innerHTML = `<i class="fa-solid fa-music"></i>`;
             featureMusic.style.setProperty("color", "#99947F", "important");
@@ -398,3 +403,13 @@ modeSelect.addEventListener("change", () => startTest(wordCount));
 
 // Start the test
 startTest(wordCount);
+
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const intro = document.getElementById('intro');
+        if (intro) {
+            intro.remove();
+        }
+    }, 1800); 
+});
