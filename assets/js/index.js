@@ -107,6 +107,8 @@ const disableModes = () =>{
 
 // Initialize the typing test
 const startTest = (wordCount) => {
+    disableModes()
+
     wordsToType.length = 0; // Clear previous words
     wordDisplay.innerHTML = ""; // Clear display
     currentWordIndex = 0;
