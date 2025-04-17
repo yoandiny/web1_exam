@@ -8,3 +8,80 @@
 body{
     background-color: var(--bg-color);
 }
+
+.profile-container{
+    width: 910px;
+    height: 196px;
+    margin-top: 50px;
+    margin-inline: auto;
+    background-color: var(--sub_alt_color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.profile-picture{
+  width: 128px;
+  aspect-ratio: 1/1;
+}
+
+.user-information{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.vertical-line{
+    width: 1px;
+    height: 100%;
+    background-color: var(--secondary-color);
+    margin-left: 247px;
+}
+
+.right-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.profile-form{
+  display: flex;
+  flex-direction: column;
+  margin-block: auto;
+}
+
+.profile-form-input{
+  width: 300px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+}
+
+.profile-form-buttons{
+  margin-top: 10px;
+}
+
+.profile-form-submit{
+  width: 137px;
+  height: 42px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  box-shadow: gray 0px 2px 3px;
+  transition: 0.4s all;
+}
+
+.profile-form-submit:hover{
+  box-shadow: none;
+  transition: 0.4s all;
+
+}

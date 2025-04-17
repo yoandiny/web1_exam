@@ -8,14 +8,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="assets/js/profil.js"></script>
     <script defer src="assets/js/nav.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Profil</title>
 </head>
 <body>
     <header id="navMenu"></header>
 
-    <div class="profile-container"></div>
+    <div class="profile-container">
+        <section class="left-container">
+            <img class="profile-picture" src="assets/img/default-user.png" alt="profile-picture">
+            <span class="user-information">
+                <p class="user-name">John Doe</p>
+                <p class="user-id"></p>
 
-    <button id="disconnect-button" onclick="logout()">Logout</button>
+            </span>
+            
+        </section>
+        <div class="vertical-line"></div>
+
+        <section class="right-container">
+            <form class="profile-form" method="post">
+                <label class="profile-form-text" id="email-text" for="email">Email address</label>
+                <input class="profile-form-input" type="email" name="email" id="email" placeholder="test@example.com">
+                <label class="profile-form-text" id="password-text" for="password">Password</label>
+                <input class="profile-form-input" type="password" name="password" id="password">
+                
+                <div class="profile-form-buttons">
+                    <button class="profile-form-submit">Update</button>
+                    <button class="profile-form-submit" id="disconnect-button" onclick="logout()">Logout</button>
+                    
+                </div>
+            </form>
+            
+        </section>
+    </div>
+
+    
+
+
+    
     
 </body>
 </html>
