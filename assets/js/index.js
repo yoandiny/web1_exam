@@ -14,13 +14,16 @@ let currentMode = null;
 let flashTimeouts = [];
 let wordCount = 25
 let scoreChartInstance = null;
+let currentPlaying = null;
 
 const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
 const feature = document.getElementById("feature");
+const featureMusic = document.getElementById("featureMusic");
 const optionMode = document.querySelector(".optionMode")
+const optionMusic = document.querySelector(".optionMusic")
 const btnReload = document.querySelector(".btn-reload")
 const scoreChartContainer = document.getElementById("scoreChartContainer")
 document.querySelector('.time-feature a:nth-child(2)').style.color = "#080909";
@@ -38,6 +41,11 @@ const words = {
     lv8: ["System42", "file_2023", "codeReview", "update-v1", "userLogin"],
     lv9: ["check,please", "let's-go!", "error.404", "run();", "name@email.com"], 
     lv10: ["console.log('done!')", "if(x===10){return;}", "let $var=42;", "Math.PI*radius", "user#1234"] 
+};
+const musicTracks = {
+    metal: new Audio("assets/audio/Pop_Metal.mp3"),
+    heavy: new Audio("assets/audio/Heavy_Action.mp3"),
+    lead: new Audio("assets/audio/Take_the_Lead.mp3"),
 };
 
 // Generate a random word from the selected mode
@@ -311,7 +319,6 @@ optionMode.addEventListener("click", (e)=> {
                 link.style.color = "#99947F";
             });
             targetLink.style.color = "#080909";
-            const value = targetLink.textContent.trim()
             const valueWithIcon =  targetLink.innerHTML.trim()
             feature.innerHTML = valueWithIcon
             feature.style.setProperty("color", "#080909", "important");
@@ -326,6 +333,58 @@ optionMode.addEventListener("click", (e)=> {
     }
     
 })
+
+
+//Handle option music
+let currentTrack = null; // Ce sera le son actuellement joué
+
+optionMusic.addEventListener("click", (e) => {
+    e.preventDefault();
+    
+    const targetLink = e.target.closest('a');
+    if (targetLink) {
+        const value = targetLink.textContent.trim().toLowerCase();
+        const valueWithIcon = targetLink.innerHTML.trim();
+        const iconHTML = targetLink.querySelector('i').outerHTML;
+
+        if (currentPlaying === targetLink || valueWithIcon.includes('fa-ban')) {
+            if (currentTrack) {
+                currentTrack.pause();
+                currentTrack.currentTime = 0;
+                currentTrack = null;
+            }
+
+            targetLink.style.color = "#99947F";
+            featureMusic.innerHTML = `<i class="fa-solid fa-music"></i>`;
+            featureMusic.style.setProperty("color", "#99947F", "important");
+            currentPlaying = null;
+        } else {
+            document.querySelectorAll('.optionMusic a').forEach(link => {
+                link.style.color = "#99947F";
+            });
+
+            const selectedTrack = musicTracks[value];
+            if (!selectedTrack) return;
+
+            if (currentTrack) {
+                currentTrack.pause();
+                currentTrack.currentTime = 0;
+            }
+
+            selectedTrack.play();
+            selectedTrack.loop = true;
+            currentTrack = selectedTrack;
+
+            targetLink.style.color = "#080909";
+            featureMusic.innerHTML = iconHTML;
+            featureMusic.style.setProperty("color", "#080909", "important");
+
+            currentPlaying = targetLink;
+        }
+    }
+});
+
+
 
 //Reload button
 btnReload.addEventListener("click",() => startTest(wordCount))
