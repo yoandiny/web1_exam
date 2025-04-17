@@ -116,6 +116,8 @@ const startTest = (wordCount) => {
     previousEndTime = null;
     totalCharsType = 0;
     totalErrors = 0;
+    inputField.disabled = false;
+
 
 
     for (let i = 0; i < wordCount; i++) {
@@ -162,8 +164,13 @@ const updateWord = (event) => {
         if (inputField.value.trim() === wordsToType[currentWordIndex]) {
             if (!previousEndTime) previousEndTime = startTime;
 
-            const { wpm, accuracy } = getCurrentStats();
-            results.textContent = `WPM: ${wpm}, Accuracy: ${accuracy}%`;
+            if (currentWordIndex === wordsToType.length - 1) {
+                const { wpm, accuracy } = getCurrentStats();
+                inputField.disabled = true;
+                previousEndTime = Date.now();
+                const finalTime = (previousEndTime - startTime) / 1000;
+                results.textContent = `WPM: ${wpm}, Accuracy: ${accuracy}%`;
+            }
 
             currentWordIndex++;
             previousEndTime = Date.now();
@@ -181,7 +188,6 @@ const handleKeydown = (event) => {
 
     if (feature.textContent.trim() === "Bounce") {
         inputField.classList.add("bounce");
-        // Supprime la classe après 300ms pour réactiver l'animation sur le prochain keydown
         setTimeout(() => inputField.classList.remove("bounce"), 300);
     }
     if (event.key !== "Backspace" && event.key !== " " && event.key.length === 1) {
