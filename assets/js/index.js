@@ -73,6 +73,7 @@ const modes = {
             allWords.forEach((span, index) => {
                 const timeoutId = setTimeout(() => {
                     span.style.visibility = "hidden";
+                    span.style.opacity = "0";
                 }, 2800 * index);
 
                 flashTimeouts.push(timeoutId);
@@ -99,6 +100,7 @@ const disableModes = () =>{
     flashTimeouts = [];
     wordDisplay.querySelectorAll("span").forEach(span => {
         span.style.visibility = "visible"; 
+        span.style.opacity = "1";
     });
 }
 
