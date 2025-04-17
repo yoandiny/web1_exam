@@ -19,41 +19,43 @@
     </header>
 
     <main>
-        <div class="bar-feature">
-            <div class="subnav">
-                <button class="subnavbtn"><i class="fa-solid fa-music"></i></button>
-                <div class="optionMusic subnav-content">
-                    <a href="#water">Water</a>
-                    <a href="#jazz">Jazz</a>
-                    <a href="#rock">Rock</a>
+        <div class="bar-feature-difficulty">
+            <div class="bar-feature">
+                <div class="subnav">
+                    <button class="subnavbtn"><i class="fa-solid fa-music"></i></button>
+                    <div class="optionMusic subnav-content">
+                        <a href="#water">Water</a>
+                        <a href="#jazz">Jazz</a>
+                        <a href="#rock">Rock</a>
+                    </div>
+                </div>
+                <div class="subnav">
+                    <button id="feature" class="subnavbtn">Mode</button>
+                    <div class="optionMode subnav-content">
+                        <a href="#ban"><i class="fa-solid fa-ban"></i></a>
+                        <a href="#zen"><i class="fa-solid fa-arrow-down-up-across-line"></i> Bounce</a>
+                        <a href="#rCaSe"><i class="fa-solid fa-text-height"></i> rCaSe</a>
+                        <a href="#shake"><i class="fa-solid fa-rss"></i> Shake</a>
+                        <a href="#reverse"><i class="fa-brands fa-flipboard"></i> Reverse</a>
+                        <a href="#flash"><i class="fa-solid fa-bolt-lightning"></i> Flash</a>
+                    </div>
+                </div>
+                <a href="#words" id="word"><i class="fa-solid fa-a"></i> Words</a>
+                <div class="time-feature">
+                    <a href="#time">10</a>
+                    <a href="#time">25</a>
+                    <a href="#time">50</a>
+                    <a href="#time">70</a>
                 </div>
             </div>
-            <div class="subnav">
-                <button id="feature" class="subnavbtn">Mode</button>
-                <div class="optionMode subnav-content">
-                    <a href="#ban"><i class="fa-solid fa-ban"></i></a>
-                    <a href="#zen"><i class="fa-solid fa-arrow-down-up-across-line"></i> Bounce</a>
-                    <a href="#rCaSe"><i class="fa-solid fa-text-height"></i> rCaSe</a>
-                    <a href="#shake"><i class="fa-solid fa-rss"></i> Shake</a>
-                    <a href="#reverse"><i class="fa-brands fa-flipboard"></i> Reverse</a>
-                    <a href="#flash"><i class="fa-solid fa-bolt-lightning"></i> Flash</a>
-                </div>
-            </div>
-            <a href="#words" id="word"><i class="fa-solid fa-a"></i> Words</a>
-            <div class="time-feature">
-                <a href="#time">10</a>
-                <a href="#time">25</a>
-                <a href="#time">50</a>
-                <a href="#time">70</a>
-            </div>
-        
+            <label for="mode">Difficulty:</label>
+            <select id="mode">
+                <option value="lv1">01</option>
+                <option value="lv2">02</option>
+                <option value="lv3">03</option>
+            </select>
+
         </div>
-        <label for="mode">Select Mode:</label>
-        <select id="mode">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
         <p id="word-display"></p>
          <div class="entry flex-btw">
             <input title="Tap here to start" size="6" oninput="this.size = this.value.length ||6" placeholder="...." type="text" id="input-field" autofocus>
