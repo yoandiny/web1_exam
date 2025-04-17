@@ -314,6 +314,9 @@ optionMode.addEventListener("click", (e)=> {
             feature.innerHTML = "Mode";
             feature.style.setProperty("color", "#99947F", "important");
             currentMode = null;
+            document.querySelectorAll('.optionMode a').forEach(link => {
+                link.style.color = "#99947F";
+            });
         }else{
             document.querySelectorAll('.optionMode a').forEach(link => {
                 link.style.color = "#99947F";
@@ -353,7 +356,9 @@ optionMusic.addEventListener("click", (e) => {
                 currentTrack.currentTime = 0;
                 currentTrack = null;
             }
-
+            document.querySelectorAll('.optionMusic a').forEach(link => {
+                link.style.color = "#99947F";
+            });
             targetLink.style.color = "#99947F";
             featureMusic.innerHTML = `<i class="fa-solid fa-music"></i>`;
             featureMusic.style.setProperty("color", "#99947F", "important");
@@ -398,3 +403,13 @@ modeSelect.addEventListener("change", () => startTest(wordCount));
 
 // Start the test
 startTest(wordCount);
+
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const intro = document.getElementById('intro');
+        if (intro) {
+            intro.remove();
+        }
+    }, 1800); 
+});
