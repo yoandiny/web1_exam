@@ -25,9 +25,16 @@ document.getElementById("word").style.color = "#080909";
 
 
 const words = {
-    lv1: ["apple", "banana", "grape", "orange", "cherry"],
-    lv2: ["keyboard", "monitor", "printer", "charger", "battery"],
-    lv3: ["synchronize", "complicated", "development", "extravagant", "misconception"]
+    lv1: ["cat", "dog", "sun", "red", "book"], 
+    lv2: ["apple", "grape", "chair", "house", "green"], 
+    lv3: ["banana", "monitor", "rocket", "garden", "window"], 
+    lv4: ["keyboard", "printer", "charger", "battery", "picture"], 
+    lv5: ["elegant", "frequent", "holiday", "capture", "library"],
+    lv6: ["development", "extravagant", "imagination", "dictionary", "situation"], 
+    lv7: ["synchronize", "misconception", "architecture", "transparency", "exaggeration"],
+    lv8: ["System42", "file_2023", "codeReview", "update-v1", "userLogin"],
+    lv9: ["check,please", "let's-go!", "error.404", "run();", "name@email.com"], 
+    lv10: ["console.log('done!')", "if(x===10){return;}", "let $var=42;", "Math.PI*radius", "user#1234"] 
 };
 
 // Generate a random word from the selected mode
