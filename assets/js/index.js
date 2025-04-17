@@ -38,7 +38,7 @@ const words = {
     lv5: ["elegant", "frequent", "holiday", "capture", "library"],
     lv6: ["development", "extravagant", "imagination", "dictionary", "situation"], 
     lv7: ["synchronize", "misconception", "architecture", "transparency", "exaggeration"],
-    lv8: ["System42", "file_2023", "codeReview", "update-v1", "userLogin"],
+    lv8: ["system42", "file_2023", "code3-view", "update-v1", "user19login"],
     lv9: ["check,please", "let's-go!", "error.404", "run();", "name@email.com"], 
     lv10: ["console.log('done!')", "if(x===10){return;}", "let $var=42;", "Math.PI*radius", "user#1234"] 
 };
