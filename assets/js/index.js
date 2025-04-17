@@ -12,7 +12,7 @@ let totalCharsType = 0
 let totalErrors = 0
 let currentMode = null; 
 let flashTimeouts = [];
-let wordCount = 30
+let wordCount = 25
 let scoreChartInstance = null;
 
 const modeSelect = document.getElementById("mode");
