@@ -13,6 +13,7 @@ let totalErrors = 0
 let currentMode = null; 
 let flashTimeouts = [];
 let wordCount = 30
+let scoreChartInstance = null;
 
 const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
@@ -21,6 +22,7 @@ const results = document.getElementById("results");
 const feature = document.getElementById("feature");
 const optionMode = document.querySelector(".optionMode")
 const btnReload = document.querySelector(".btn-reload")
+const scoreChartContainer = document.getElementById("scoreChartContainer")
 document.querySelector('.time-feature a:nth-child(2)').style.color = "#080909";
 document.getElementById("word").style.color = "#080909";
 
@@ -117,6 +119,12 @@ const startTest = (wordCount) => {
     totalCharsType = 0;
     totalErrors = 0;
     inputField.disabled = false;
+    scoreChartContainer.style.display = "none";
+
+    if (scoreChartInstance) {
+        scoreChartInstance.destroy();
+        scoreChartInstance = null;
+    }
 
 
 
@@ -169,7 +177,51 @@ const updateWord = (event) => {
                 inputField.disabled = true;
                 previousEndTime = Date.now();
                 const finalTime = (previousEndTime - startTime) / 1000;
-                results.textContent = `WPM: ${wpm}, Accuracy: ${accuracy}%`;
+
+                scoreChartContainer.style.display = "flex";
+
+                scoreChartInstance = new Chart(document.getElementById('scoreChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['WPM', 'Accuracy'],
+                        datasets: [{
+                            label: 'Résultats',
+                            data: [wpm, accuracy],
+                            backgroundColor: ['#7fa480', '#c87e74'],
+                            borderRadius: 5,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'x', // met 'x' si tu veux des barres verticales
+                        responsive: true,
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: {
+                                    font: {
+                                        weight: 600,
+                                        size: 14
+                                    }
+                                }
+                            },
+                            y: {
+                                ticks: {
+                                    font: {
+                                        weight: 600,
+                                        size: 14
+                                    }
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: { enabled: true }
+                        }
+                    }
+                });
+
 
                 //Stockage score with localStorage
                 const history = JSON.parse(localStorage.getItem("typingHistory")) || [];
