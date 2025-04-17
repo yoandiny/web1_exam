@@ -25,9 +25,9 @@ document.getElementById("word").style.color = "#080909";
 
 
 const words = {
-    easy: ["apple", "banana", "grape", "orange", "cherry"],
-    medium: ["keyboard", "monitor", "printer", "charger", "battery"],
-    hard: ["synchronize", "complicated", "development", "extravagant", "misconception"]
+    lv1: ["apple", "banana", "grape", "orange", "cherry"],
+    lv2: ["keyboard", "monitor", "printer", "charger", "battery"],
+    lv3: ["synchronize", "complicated", "development", "extravagant", "misconception"]
 };
 
 // Generate a random word from the selected mode
