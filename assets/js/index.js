@@ -20,6 +20,7 @@ const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
 const feature = document.getElementById("feature");
 const optionMode = document.querySelector(".optionMode")
+const btnReload = document.querySelector(".btn-reload")
 document.querySelector('.time-feature a:nth-child(2)').style.color = "#080909";
 document.getElementById("word").style.color = "#080909";
 
@@ -249,11 +250,14 @@ optionMode.addEventListener("click", (e)=> {
     
 })
 
+//Reload button
+btnReload.addEventListener("click",() => startTest(wordCount))
 
 // Attach `updateWord` to `keydown` instead of `input`
 inputField.addEventListener("keydown", (event) => {
     handleKeydown(event);
 });    
+
 modeSelect.addEventListener("change", () => startTest(wordCount));
 
 // Start the test
