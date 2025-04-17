@@ -184,6 +184,24 @@ label[for="mode"] {
 
 
 
+/*---------------------------------------HISTORY-RESULT-------------------- */
+#scoreChartContainer {
+  width: 400px;
+  height: 300px;
+  background: var(--bg_color);
+  border-radius: 10px;
+  border: 1px solid #99947f3e;
+  box-shadow: 0 0 5px #99947f2a;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 999;
+}
 /*---------------------------------------FOOTER-------------------- */
 footer {
   border-top: 1px solid var(--sub_alt_color);
