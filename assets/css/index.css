@@ -254,3 +254,42 @@ footer ul:nth-child(2) li{
   100% { transform: translate(0, 0); }
 }
 
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg_color); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 0.5s ease-out 1.5s forwards;
+}
+
+.logoStart{
+  animation: logoAnim 1s ease-out;
+}
+
+
+@keyframes logoAnim {
+  0% {
+      opacity: 0;
+      transform: scale(1.5) rotate(-20deg);
+  }
+  50% {
+      opacity: 1;
+      transform: scale(2.2) rotate(10deg);
+  }
+  100% {
+      transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+      opacity: 0;
+      visibility: hidden;
+  }
+}
