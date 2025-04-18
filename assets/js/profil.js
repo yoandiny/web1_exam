@@ -1,6 +1,6 @@
 const isConnected = localStorage.getItem("isConnected");
 const disconnectButton = document.getElementById('disconnect-button');
-const typingHistory =JSON.parse(localStorage.getItem("typingHistory"))
+const typingHistory = JSON.parse(localStorage.getItem("typingHistory") || "[]");
 const profileForm = document.querySelector('.profile-form');
 const username = localStorage.getItem("username");
 const usernameField = document.querySelector('.user-name');
@@ -8,6 +8,8 @@ const id = localStorage.getItem("id");
 const idField = document.querySelector('.user-id');
 
 const passwordField = document.getElementById('password');
+
+
 
 
 if (!isConnected || isConnected === "false"){
@@ -73,13 +75,38 @@ const handleUpdate = () => {
     
 }
 
-
-
 profileForm.addEventListener('submit', (event) => {
     event.preventDefault();
     handleregister();
 });
 
+//Chart part
+
+const labels = typingHistory.map(entry => entry.date);
+const scores = typingHistory.map(entry => entry.wpm);
+
+
+const ctx = document.getElementById('wpmChart').getContext('2d');
+
+const wpmChart = new Chart(ctx, {
+  type: 'line', 
+  data: {
+    labels: labels,
+    datasets: [{
+      label: 'Word Per Minute (WPM)',
+      data: scores,
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
 
 
 
