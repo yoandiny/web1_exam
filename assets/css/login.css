@@ -104,9 +104,11 @@ body{
   transition: all 0.3s;
   cursor: pointer;
   transition: all 0.3s;
+  color: white;
 }
 
 .login-form-submit:hover{
+  color: #333;
   background-color: #7f7c69;
   transform: scale(1.03);
 }
