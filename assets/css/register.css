@@ -7,6 +7,8 @@
 
 body{
     background-color: var(--bg_color);
+    font-family: 'Roboto Mono', 'Arial', sans-serif;
+
 }
 
 .register-form{
