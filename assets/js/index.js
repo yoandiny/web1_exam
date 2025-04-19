@@ -186,6 +186,7 @@ const updateWord = (event) => {
                 previousEndTime = Date.now();
                 const finalTime = (previousEndTime - startTime) / 1000;
 
+                //Chart Part
                 scoreChartContainer.style.display = "flex";
 
                 scoreChartInstance = new Chart(document.getElementById('scoreChart'), {
