@@ -1,4 +1,4 @@
-const logo = document.querySelector(".logo");
+
 const menu = document.getElementById("navMenu");
 
 
@@ -23,6 +23,7 @@ menu.innerHTML = `
         </div>
 `;
 
+const logo = document.querySelector(".logo");
 
 logo.addEventListener("click", () => {
     window.location.href = "index.html";
