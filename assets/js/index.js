@@ -201,7 +201,7 @@ const updateWord = (event) => {
                         }]
                     },
                     options: {
-                        indexAxis: 'x', // met 'x' si tu veux des barres verticales
+                        indexAxis: 'x', 
                         responsive: true,
                         scales: {
                             x: {
@@ -339,7 +339,7 @@ optionMode.addEventListener("click", (e)=> {
 
 
 //Handle option music
-let currentTrack = null; // Ce sera le son actuellement joué
+let currentTrack = null; // it's actually the current song play
 
 optionMusic.addEventListener("click", (e) => {
     e.preventDefault();
