@@ -7,6 +7,11 @@ const id = localStorage.getItem("id");
 const idField = document.querySelector('.user-id');
 const passwordField = document.getElementById('password');
 
+const isConnected = localStorage.getItem("isConnected");
+        if (!isConnected || isConnected === "false"){
+            window.location.href = "login.html";
+        }
+
 
 const logout = () => {
     localStorage.setItem("isConnected", "false");
@@ -14,7 +19,7 @@ const logout = () => {
 }
 
 usernameField.innerText = username;
-idField.innerText = id;
+idField.innerText = `#${id}`;
 
 document.getElementById('email').placeholder = localStorage.getItem('mail')
 
@@ -76,7 +81,8 @@ profileForm.addEventListener('submit', (event) => {
 //Chart part
 
 const labels = typingHistory.map(entry => entry.date);
-const scores = typingHistory.map(entry => entry.wpm);
+const wpm = typingHistory.map(entry => entry.wpm);
+const accuracy = typingHistory.map(entry => entry.accuracy);
 
 
 const ctx = document.getElementById('wpmChart').getContext('2d');
@@ -87,9 +93,14 @@ const wpmChart = new Chart(ctx, {
     labels: labels,
     datasets: [{
       label: 'Word Per Minute (WPM)',
-      data: scores,
+      data: wpm,
       borderWidth: 1
-    }]
+    },
+    {
+        label: 'Accuracy',
+        data: accuracy,
+        borderWidth: 1
+      }]
   },
   options: {
     responsive: true,

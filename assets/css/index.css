@@ -202,20 +202,7 @@ label[for="mode"] {
   padding: 20px;
   z-index: 999;
 }
-/*---------------------------------------FOOTER-------------------- */
-footer {
-  border-top: 1px solid var(--sub_alt_color);
-  padding-top: 1rem;
-  width: 80vw;
-  font-size: 0.8rem;
-  margin: 1rem auto 0 auto;
-}
-footer ul:nth-child(1) li{
-  padding-right: 0.6rem;
-}
-footer ul:nth-child(2) li{
-  padding-left: 0.6rem;
-}
+
 
 
 
