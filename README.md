@@ -8,7 +8,7 @@ KeyGo is a typing website where you can test your skills through various game mo
 An account is not necessary to use the website, but to have a tracking of your statistics, you'll have to register
 
 ### Available Modes
-- Bounce mod
+- Bounce 
 - rCaSe
 - Shake
 - Reverse

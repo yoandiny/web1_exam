@@ -186,6 +186,7 @@ const updateWord = (event) => {
                 previousEndTime = Date.now();
                 const finalTime = (previousEndTime - startTime) / 1000;
 
+                //Chart Part
                 scoreChartContainer.style.display = "flex";
 
                 scoreChartInstance = new Chart(document.getElementById('scoreChart'), {
@@ -201,7 +202,7 @@ const updateWord = (event) => {
                         }]
                     },
                     options: {
-                        indexAxis: 'x', // met 'x' si tu veux des barres verticales
+                        indexAxis: 'x', 
                         responsive: true,
                         scales: {
                             x: {
@@ -339,7 +340,7 @@ optionMode.addEventListener("click", (e)=> {
 
 
 //Handle option music
-let currentTrack = null; // Ce sera le son actuellement joué
+let currentTrack = null; // it's actually the current song play
 
 optionMusic.addEventListener("click", (e) => {
     e.preventDefault();

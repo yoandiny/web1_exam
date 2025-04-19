@@ -14,7 +14,6 @@
 </head>
 <body>
     <div id="navMenu"></div>
-
     <div class="register-form">
         <h3 class="title">Register</h3>
         <form method="post">
@@ -22,38 +21,27 @@
             <input class="register-form-input" type="text" name="username" id="username" placeholder="John Doe">
             <label class="register-form-text" id="email-text" for="email">Email address</label>
             <input class="register-form-input" type="email" name="email" id="email" placeholder="test@example.com">
-            <label class="register-form-text" id="password-text" for="password">Password</label>
+            <label class="register-form-text" id="password-text" for="password" aria-placeholder="********">Password</label>
             <input class="register-form-input" type="password" name="password" id="password">
-            <p>Already have an account? <a class="register-link" href="login.html">Login</a></p>
             <button class="register-form-submit">Register</button>
-
             <section class="btn-container">
                 <div class="register-btn" id="google-register" onclick="handleregister('google-register')" >
                     <img class="register-logo" src="assets/img/google-logo.png" alt="Google Logo">
                     <span class="register-text">Register with Google</span>
-                </div>
-            
+                </div>         
                 <div class="register-btn" id="github-register" onclick="handleregister('github-register')" >
                     <img class="register-logo" src="assets/img/github-logo.png" alt="GitHub Logo">
                     <span class="register-text">Register with Github</span>
                 </div>
             </section>
-
+            <p class="signup-prompt">Already have an account? <a class="register-link" href="login.html">Login</a></p>
             <div class="register-form-message">
                 <p class="register-form-message-text"></p>
             </div>
-
         </form>
-
-        
-
-        
     </div>
 
 
-    <div id="footer"></div>
-
-   
-    
+<div id="footer"></div>
 </body>
 </html>
