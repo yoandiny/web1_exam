@@ -7,11 +7,6 @@ const id = localStorage.getItem("id");
 const idField = document.querySelector('.user-id');
 const passwordField = document.getElementById('password');
 
-const isConnected = localStorage.getItem("isConnected");
-        if (!isConnected || isConnected === "false"){
-            window.location.href = "login.html";
-        }
-
 
 const logout = () => {
     localStorage.setItem("isConnected", "false");
