@@ -40,7 +40,7 @@ const words = {
     lv7: ["synchronize", "misconception", "architecture", "transparency", "exaggeration"],
     lv8: ["system42", "file_2023", "code3-view", "update-v1", "user19login"],
     lv9: ["check,please", "let's-go!", "error.404", "run();", "name@email.com"], 
-    lv10: ["console.log('done!')", "if(x===10){return;}", "let $var=42;", "Math.PI*radius", "user#1234"] 
+    lv10: ["console.log('done!')", "if(x===10){return;}", "let $var=42;", "math.pi*radius", "user#1234"] 
 };
 const musicTracks = {
     metal: new Audio("assets/audio/Pop_Metal.mp3"),
