@@ -124,7 +124,7 @@ body{
 
 .chart-container{
   width: 70vw;
-  padding: 20px;
+  padding: 40px 20px;
   height: 450px;
   background-color: var(--sub_alt_color);
   border-radius: 10px;
