@@ -3,9 +3,8 @@ const menu = document.getElementById("navMenu");
 
 
 menu.innerHTML = `
-           <div class="navbar flex-btw">
-            <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
-           <link rel="stylesheet" href="assets/css/nav.css">
+        <div class="navbar flex-btw">
+
             <div class="logo">
                 <i class="fa-solid fa-terminal"></i>
                 <h1>Keygo</h1>
