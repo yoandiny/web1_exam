@@ -13,7 +13,6 @@
 </head>
 <body>
     <div id="navMenu"></div>
-
     <div class="login-form">
         <h3 class="title">Login</h3>
         <form method="post">
@@ -22,33 +21,21 @@
             <label class="login-form-text"  for="password">Password</label>
             <input class="login-form-input" type="password" name="password" id="password" placeholder="*********">
             <button class="login-form-submit">Login</button>
-
             <section class="btn-container">
                 <div class="login-btn" id="google-login" onclick="handleLogin('google-login')" >
                     <img class="login-logo" src="assets/img/google-logo.png" alt="Google Logo">
                     <span class="login-text">Log In with Google</span>
-                </div>
-            
+                </div>     
                 <div class="login-btn" id="github-login" onclick="handleLogin('github-login')" >
                     <img class="login-logo" src="assets/img/github-logo.png" alt="GitHub Logo">
                     <span class="login-text">Log In with Github</span>
                 </div>
             </section>
             <p class="signup-prompt">Don't have an account? <a class="register-link" href="register.html">Register</a></p>
-
-
             <div class="login-form-message">
                 <p class="login-form-message-text"></p>
             </div>
-
         </form>
-
-        
-
-        
     </div>
-
-   
-    
 </body>
 </html>

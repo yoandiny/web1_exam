@@ -1,13 +1,13 @@
 :root{
-    --bg_color :  #EEEBE2;
-    --main-color: #080909;
-    --secondary-color: #99947F;
-    --sub_alt_color : #D3CFC1 ;
+  --bg_color :  #EEEBE2;
+  --main-color: #080909;
+  --secondary-color: #99947F;
+  --sub_alt_color : #D3CFC1 ;
   }
 
 body{
-    background-color: var(--bg_color);
-    font-family: 'Roboto Mono', 'Arial', sans-serif;
+  background-color: var(--bg_color);
+  font-family: 'Roboto Mono', 'Arial', sans-serif;
 
 }
 
@@ -24,11 +24,11 @@ body{
 
 
 .register-form form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-inline: auto;
 }
 
 .register-form-text{
@@ -89,11 +89,11 @@ body{
 }
 
 .btn-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 20px;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
 
 .register-form-submit{
   margin-inline: auto;
@@ -136,20 +136,20 @@ body{
     margin-left: 80px;
 }
 
-  .register-btn:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transform: translateY(-1px);
-  }
+.register-btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
 
-  .register-logo {
-    width: 20px;
-    height: 20px;
-  }
+.register-logo {
+  width: 20px;
+  height: 20px;
+}
 
-  .register-text {
-    color: #333;
-    font-size: 14px;
-  }
+.register-text {
+  color: #333;
+  font-size: 14px;
+}
 
 .register-form-message {
     margin-top: 10px;
@@ -161,7 +161,7 @@ body{
     padding: 10px 0;
     align-items: center;
     
-  }
+}
 
 .register-error-message{
   background-color: #c87e74;
