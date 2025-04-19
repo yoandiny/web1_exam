@@ -7,7 +7,7 @@ Yoan - STD24005 | Rindra - STD24018
 KeyGo is a typing website where you can test your skills through various game modes.
 
 ### Available Modes
-- Bounce mod
+- Bounce 
 - rCaSe
 - Shake
 - Reverse
