@@ -51,6 +51,26 @@ ul {
   font-weight: bold;
 }
 
+.alert-box{
+  background-color: #fff8dc;
+  border-left: 6px solid var(--secondary-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-size: 1rem;
+  color: var(--main-color);
+}
+.alert-box h2{
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.alert-box h2 i {
+  margin-right: 10px;
+  color: #e1a100;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
